@@ -55,3 +55,9 @@ config/*.local.json
 *.env
 **/local.settings.json
 
+
+# Local secrets (never commit)
+config/*.local.json
+*.env
+**/local.settings.json
+
