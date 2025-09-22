@@ -1,0 +1,13 @@
+# Find what's using port 3000
+netstat -ano | findstr :3000
+netstat -ano | findstr :7071
+
+# This will show output like:
+# TCP    0.0.0.0:3000    0.0.0.0:0    LISTENING    12345
+# The last number (12345) is the Process ID (PID)
+
+# Get the process name
+Get-Process -Id [PID] | Select-Object ProcessName, Id
+
+# Kill the process
+Stop-Process -Id [PID] -Force

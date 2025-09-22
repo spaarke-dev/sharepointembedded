@@ -1,0 +1,82 @@
+{
+  "projectName": "SharePoint Embedded Document Manager",
+  "environment": "Production",
+  "lastUpdated": "YYYY-MM-DD",
+  
+  "azure": {
+    "subscriptionId": "YOUR_AZURE_SUBSCRIPTION_ID",
+    "subscriptionName": "YOUR_SUBSCRIPTION_NAME",
+    "tenantId": "YOUR_TENANT_ID",
+    "tenantName": "YOUR_TENANT_NAME",
+    "resourceGroup": "YOUR_RESOURCE_GROUP_NAME",
+    "region": "YOUR_AZURE_REGION"
+  },
+  
+  "appRegistration": {
+    "applicationName": "SharePoint Embedded Document Manager",
+    "clientId": "YOUR_APP_CLIENT_ID",
+    "objectId": "YOUR_APP_OBJECT_ID",
+    "clientSecret": "YOUR_CLIENT_SECRET",
+    "secretExpiryDate": "YYYY-MM-DD",
+    "authority": "https://login.microsoftonline.com/YOUR_TENANT_ID",
+    "audience": "api://YOUR_APP_CLIENT_ID",
+    "redirectUris": [
+      "http://localhost:3000",
+      "http://localhost:3000/redirect",
+      "http://localhost:3000/auth/callback",
+      "https://YOUR_STATIC_WEB_APP.azurestaticapps.net",
+      "https://YOUR_STATIC_WEB_APP.azurestaticapps.net/redirect"
+    ]
+  },
+  
+  "sharePointEmbedded": {
+    "containerTypeId": "YOUR_CONTAINER_TYPE_ID",
+    "containerTypeName": "YOUR_CONTAINER_TYPE_NAME",
+    "owningApplicationId": "YOUR_APP_CLIENT_ID",
+    "registrationStatus": "NOT_REGISTERED"
+  },
+  
+  "azureFunctions": {
+    "appName": "YOUR_FUNCTIONS_APP_NAME",
+    "url": "https://YOUR_FUNCTIONS_APP_NAME.azurewebsites.net",
+    "storageAccount": "YOUR_STORAGE_ACCOUNT_NAME",
+    "hostingPlan": "Consumption"
+  },
+  
+  "staticWebApp": {
+    "appName": "YOUR_STATIC_WEB_APP_NAME",
+    "url": "https://YOUR_STATIC_WEB_APP_NAME.azurestaticapps.net",
+    "deploymentToken": "YOUR_DEPLOYMENT_TOKEN",
+    "repositoryUrl": "YOUR_GITHUB_REPO_URL"
+  },
+  
+  "powerPlatform": {
+    "environmentUrl": "https://YOUR_ORG.crm.dynamics.com",
+    "solutionName": "Spaarke.Dms",
+    "publisherPrefix": "sprk",
+    "publisherName": "Spaarke"
+  },
+  
+  "dataverseTables": [
+    "sprk_document",
+    "sprk_documentitem",
+    "sprk_documentassociation",
+    "sprk_documentversion",
+    "sprk_documentcontainer"
+  ],
+  
+  "statusChecklist": {
+    "azureSubscription": false,
+    "resourceGroup": false,
+    "syntexProvider": false,
+    "appRegistration": false,
+    "apiPermissions": false,
+    "adminConsent": false,
+    "containerType": false,
+    "functionsApp": false,
+    "staticWebApp": false,
+    "corsConfigured": false,
+    "localDevWorking": false,
+    "productionDeployed": false
+  }
+}
